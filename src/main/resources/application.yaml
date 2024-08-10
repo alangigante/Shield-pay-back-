@@ -1,9 +1,14 @@
 spring:
   application:
       name: shield-pay-service
+  banner:
+    location: classpath:banner.txt
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: ${DB_PASSWORD:teste123}
-    username: ${DB_USERNAME:developer}
+    password: ${DB_PASSWORD:test123}
+    username: ${DB_USERNAME:postgres}
     url: ${DB_HOST:jdbc:postgresql://localhost:5432/shield_pay}
+  flyway:
+    locations: classpath:db/migrations
+
