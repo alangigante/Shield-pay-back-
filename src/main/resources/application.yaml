@@ -1,3 +1,9 @@
 spring:
   application:
       name: shield-pay-service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: ${DB_PASSWORD:teste123}
+    username: ${DB_USERNAME:developer}
+    url: ${DB_HOST:jdbc:postgresql://localhost:5432/shield_pay}
