@@ -10,5 +10,9 @@ spring:
     username: ${DB_USERNAME:postgres}
     url: ${DB_HOST:jdbc:postgresql://localhost:5432/shield_pay}
   flyway:
-    locations: classpath:db/migrations
+    locations: classpath:db.migrations
 
+
+server:
+  servlet:
+    context-path: /v1/shield
